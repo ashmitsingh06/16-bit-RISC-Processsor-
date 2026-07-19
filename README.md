@@ -30,16 +30,31 @@ The processor demonstrates the fundamental concepts of processor design, includi
 ```
 16-bit-RISC-Processor/
 │
+├── README.md
+├── LICENSE                 # Optional
+├── .gitignore
+│
 ├── src/
-│   ├── 16bit_risc.v        # Top-level module
+│   ├── 16bit_risc.v        # Top-level processor module
 │   ├── alu_unit.v          # Arithmetic Logic Unit
-│   ├── bit_risc.v          # Instruction Decoder
-│   ├── ctrl_unit.v         # Control Unit (FSM)
-│   ├── fake_ram.v          # Memory Module
+│   ├── bit_risc.v          # Instruction decoder / datapath module
+│   ├── ctrl_unit.v         # Control Unit
+│   ├── fake_ram.v          # Instruction/Data Memory
 │   ├── pc_unit.v           # Program Counter
 │   └── reg_unit.v          # Register File
 │
-├── README.md
+├── testbench/
+│   ├── bit_risc_tb.v
+│   ├── reg_unit_tb.v
+│   └── main_test_tb.v
+│
+├── simulation/
+│   └── main_test.v         # Simulation stimulus/program
+│
+└── screenshots/
+    ├── rtl_schematic.png
+    ├── waveform.png
+    └── synthesis.png
 ```
 
 ---
